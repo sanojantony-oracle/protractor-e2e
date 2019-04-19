@@ -1,0 +1,27 @@
+{
+  "name": "protractor-e2e",
+  "version": "1.0.0",
+  "description": "FAWAutomation",
+  "main": "conf.js",
+  "scripts": {
+    "debug": "node --inspect-brk ./node_modules/.bin/protractor conf.js",
+    "pretest": "npm run tsc &&  npm run webdriver-update & webdriver-manager start",
+    "test": "protractor conf.js",
+    "tsc": "tsc",
+    "webdriver-update": "webdriver-manager update --standalone --gecko=false --proxy=http://www-proxy.us.oracle.com:80 --ignore-ssl"
+  },
+  "dependencies": {
+    "jasmine": "^3.3.1",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/jasminewd2": "^2.0.6",
+    "@types/node": "^11",
+    "@types/selenium-webdriver": "^4.0.0"
+  },
+  "author": "Sanoj Antony",
+  "license": "MIT"
+}
