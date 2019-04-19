@@ -6,7 +6,7 @@ exports.config = {
 
     // Spec patterns are relative to the current working directory when
     // protractor is called.
-    specs: ['src/testsuites/login/login-suite.spec.js'],
+    specs: ['dist/testsuites/login/login-suite.spec.js'],
 
     SELENIUM_PROMISE_MANAGER: false,
 
@@ -18,7 +18,7 @@ exports.config = {
     // Spec patterns are relative to the location of the spec file. They may
     // include glob patterns.
     suites: {
-        loginsuite: 'src/testsuites/login/**/*.spec.js'
+        loginsuite: 'dist/testsuites/login/**/*.spec.js'
 
     },
 
