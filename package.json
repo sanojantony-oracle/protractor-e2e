@@ -10,7 +10,8 @@
     "start-selenium": "webdriver-manager start",
     "test": "protractor conf.js",
     "tsc": "tsc",
-    "webdriver-update": "webdriver-manager update --standalone --proxy=http://www-proxy.us.oracle.com:80 --ignore-ssl"
+    "webdriver-update": "webdriver-manager update --standalone --proxy=http://www-proxy.us.oracle.com:80 --ignore-ssl",
+    "json-server": ""
   },
   "dependencies": {
     "jasmine": "^3.3.1",
