@@ -1,13 +1,12 @@
 
-import {$, $$} from 'protractor';
-import {WaitingObject} from '../waitingobject';
+import {$, $$, browser} from 'protractor';
+import {PageObject} from "../base/pageobject";
+import {HomePage} from "../home/home.page";
 
 /**
  * Login View Page Object
- *
- * This will abstract test code from View internals and selectors, allowing single point of change if the view changes
  */
-export class LoginPage extends WaitingObject {
+export class LoginPage extends PageObject {
 
     userName;
     password;
@@ -70,9 +69,13 @@ export class LoginPage extends WaitingObject {
      * <p>Login to Data configuration</p>
      * @returns {Promise<void>}
      */
-    async login() {
+      async login() {
         await this.signInBtn.click();
-        //TODO return homePage;
+        //TODO handle error conditions
+        await browser.sleep(10000);
+        let homePage = new HomePage();
+        homePage.waitUntilPageDisplayed();
+        return homePage;
     }
 }
 
